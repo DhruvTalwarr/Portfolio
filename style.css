@@ -1,0 +1,327 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Base text (paragraphs, normal text) */
+body {
+    background: linear-gradient(135deg, #0d0d1a, #0a0f29);
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    /* bigger than default */
+    line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.7rem;
+    /* Main title */
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 2.1rem;
+    /* Section headings */
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #d1d1f5;
+}
+
+h3 {
+    font-size: 1.6rem;
+    /* Sub-headings */
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #b3b3ff;
+}
+
+/* Optional - make paragraph text a bit softer */
+p {
+    font-size: 1.1rem;
+    color: #cccccc;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+/* Header */
+.header {
+    background: rgba(15, 12, 41, 0.75);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Navbar Styling */
+.navbar {
+    position: sticky;
+    /* stays on top while scrolling */
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(10, 15, 26, 0.9);
+    /* bluish-black with transparency */
+    backdrop-filter: blur(8px);
+    /* glassy effect */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #9bc9ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 5px 0;
+}
+
+.nav-links li a:hover {
+    color: #9bc9ff;
+    border-bottom: 2px solid #9bc9ff;
+}
+
+.logo {
+    color: #8a7dff;
+    font-weight: bold;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #b09cff;
+}
+
+nav a {
+    margin-left: 25px;
+    color: #d1d1d1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #8a7dff;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-img {
+    width: 250px;
+    border-radius: 50%;
+    border: 4px solid #8a7dff;
+    box-shadow: 0 0 25px rgba(138, 125, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #6a5acd, #483d8b);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(106, 90, 205, 0.5);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #7b68ee, #5a4fcf);
+    box-shadow: 0 0 25px rgba(138, 125, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(138, 125, 255, 0.6);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover .card {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 20px rgba(120, 160, 255, 0.6);
+}
+
+.profile-pic {
+    width: 350px;
+    /* increased size */
+    height: 350px;
+    /* increased size */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #6a5acd;
+    /* slightly thicker border */
+    box-shadow: 0 0 25px rgba(106, 90, 205, 0.7);
+    /* stronger glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    /* slight zoom effect on hover */
+    box-shadow: 0 0 35px rgba(106, 90, 205, 0.9);
+}
+
+/* Project Images */
+.brain-img,
+.diabetes-img,
+.plant-disease {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0px 0px 20px rgba(138, 125, 255, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.brain-img:hover,
+.diabetes-img:hover,
+.plant-disease:hover {
+    transform: scale(1.03);
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: auto;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    box-shadow: 0 0 10px rgba(138, 125, 255, 0.6);
+}
+
+form button {
+    padding: 12px;
+    background: linear-gradient(135deg, #6a5acd, #483d8b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #7b68ee, #5a4fcf);
+    box-shadow: 0 0 15px rgba(138, 125, 255, 0.6);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #0a0f1a, #1a1f2e);
+    /* bluish-black gradient */
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #9bc9ff;
+    /* light bluish */
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    /* highlight on hover */
+}
