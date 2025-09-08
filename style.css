@@ -238,7 +238,7 @@ nav a:hover {
 }
 
 /* Project Images */
-.brain-img,
+/* .brain-img,
 .diabetes-img,
 .plant-disease {
     width: 100%;
@@ -253,6 +253,25 @@ nav a:hover {
 .brain-img:hover,
 .diabetes-img:hover,
 .plant-disease:hover {
+    transform: scale(1.03);
+} */
+ /* 🖼️ Standard Project Images */
+.project-img {
+    width: 100%;
+    max-width: 350px;
+     /* ✅ consistent width */
+    height: 220px;
+     /* ✅ same height across all */
+    object-fit: cover;
+     /* ✅ crops extra parts neatly */
+    margin: 25px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(138, 125, 255, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.project-img:hover {
     transform: scale(1.03);
 }
 
@@ -325,3 +344,5 @@ footer {
     color: #fff;
     /* highlight on hover */
 }
+
+rewrite this doing the correspondig change
